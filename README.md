@@ -1,6 +1,8 @@
 # AIRTimerResolution_ANE
-Extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution.
+Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution.
 The AIR window TimerResolution appears to have a direct affect on additional delays found in 'Waiting for Next Frame'.
+
+## NOTE That this extension has not been widely tested
 
 ### Components:
 - `TimerResExtDLL`: Native library source to interface with `ntdll.dll`
