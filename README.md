@@ -5,7 +5,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 ### Components:
 - `TimerResExtDLL`: Native library source to interface with `ntdll.dll`
 - `TimerResExtension`: FlashDevelop ActionScript source for the extension
-- `TimerResANE`: Packaged Extension
+- `TimerResANE.ane`: Packaged Extension
 
 ### Requires:
 - Adobe AIR SDK (~32.0.0.116)
