@@ -11,7 +11,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 - Adobe AIR SDK (~32.0.0.116)
 - FlashDevelop
 - Visual Studio 2019
-- Visual C++ 2015 Redistributable
+- Visual C++ 2015 Redistributable (Also required on deployed application's device, otherwise DLL may not load!) 
 
 ### Building:
 **Step 1:** Set up a directory with the contents of TimerResANE. For FlashDevelop, this directory must end in `.ane` (i.e. TimerResExt.ane)
