@@ -14,21 +14,21 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 - Visual C++ 2015 Redistributable
 
 ### Building:
-Step 1: Set up a directory with the contents of TimerResANE. For FlashDevelop, this directory must end in `.ane` (i.e. TimerResExt.ane)
+**Step 1:** Set up a directory with the contents of TimerResANE. For FlashDevelop, this directory must end in `.ane` (i.e. TimerResExt.ane)
 
-Step 2: Set up FlashDevelop with TimerResExtension source & build. (AIR SDK 32.0.0.116)
+**Step 2:** Set up FlashDevelop with TimerResExtension source & build. (AIR SDK 32.0.0.116)
 
-Step 3: Build SWC using ``acompc -source-path src -include-classes io.improt.timerres.TimerResANE io.improt.timerres.TimerRes -output TimerResExt.swc`` in the base directory of TimerResExtension.
+**Step 3:** Build SWC using ``acompc -source-path src -include-classes io.improt.timerres.TimerResANE io.improt.timerres.TimerRes -output TimerResExt.swc`` in the base directory of TimerResExtension.
 - You can find acompc.bat in `bin` in the AIR SDK
 
-Step 4: Replace the two `library.swf` files in `\` and `\META-INF\ANE\Windows-x86\` from your TimerResANE directory, with the built SWF from Step 2. 
+**Step 4:** Replace the two `library.swf` files in `\` and `\META-INF\ANE\Windows-x86\` from your TimerResANE directory, with the built SWF from Step 2. 
 - (Built SWF is found in ``bin`` of the FlashDevelop directory. Note that it must be named library.swf)
 
-Step 5: Build the native library using at least Visual Studio 2019 for Release. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
+**Step 5:** Build the native library using at least Visual Studio 2019 for Release. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
 
-Step 6: Replace ``TimerResExtDLL.dll`` from `\META-INF\ANE\Windows-x86\` with your newly compiled native DLL from Step 5.
+**Step 6:** Replace ``TimerResExtDLL.dll`` from `\META-INF\ANE\Windows-x86\` with your newly compiled native DLL from Step 5.
 
-Step 7: The extension should now be usable. You will need to link the SWC in the root to the resulting application SWF file. Your application.xml will also need the extension specified, as well as supporting `extendedDesktop` as a profile.
+**Step 7:** The extension should now be usable. You will need to link the SWC in the root to the resulting application SWF file. Your application.xml will also need the extension specified, as well as supporting `extendedDesktop` as a profile.
 
 ```
 ...
