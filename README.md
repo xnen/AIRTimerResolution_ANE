@@ -79,3 +79,11 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 ![Demonstration](img/ANE@8-58FPS.png)
 *Total Frame Time -> 58.0FPS + 8.0ms* 
 
+##### Old vs. New SWF version NtTimerResolution behavior
+**Old**:
+![old behavior](img/timerres-oldsdk.png)
+
+**New**:
+![new behavior](img/timerres-newsdk.png)
+
+*Older SWF Versions specified lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times.*
