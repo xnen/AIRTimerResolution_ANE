@@ -30,7 +30,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 
 **Step 6:** Replace ``TimerResExtDLL.dll`` from `\META-INF\ANE\Windows-x86\` with your newly compiled native DLL from Step 5.
 
-**Step 7:** The extension should now be usable. You will need to link the SWC in the root to the resulting application SWF file. Your application.xml will also need the extension specified, as well as supporting `extendedDesktop` as a profile.
+**Step 7:** The extension should now be usable. You will need to link the SWC in the root to the resulting application SWF file. Your application.xml will also need the extension specified, as well as supporting `extendedDesktop` as a profile. Lastly, you may need to specify an extensions directory `extdir` containing the `*****.ane` folder during packaging or debugging.
 
 ```
 ...
