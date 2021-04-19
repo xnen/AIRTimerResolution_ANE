@@ -65,3 +65,17 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 
 ##### 4. The extension can be destroyed using ``TimerResANE.dispose();``
 
+
+### Issue / Fix
+
+##### Default Frame Limiting on latest AIR SDK, NtTimerResolution @ 15.621ms (default)
+![Standard Issue from default Frame Limiter](img/WithoutANE-58FPS.png)
+*Total Frame Time -> 58.0 FPS + 15.621ms*
+
+##### Frame Limiting with TimerResANE::UpdateResolution(0) implemented, NtTimerResolution @ 0.496ms
+![Issue Resolved](img/WIthANE@0-58FPS.png)
+
+##### NtTimerResolution @ 8.0ms - Frame Spikes now ~24ms
+![Demonstration](img/ANE@8-58FPS.png)
+*Total Frame Time -> 58.0FPS + 8.0ms* 
+
