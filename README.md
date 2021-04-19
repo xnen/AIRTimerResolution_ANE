@@ -1,5 +1,5 @@
 # AIRTimerResolution_ANE
-Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution.
+Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution, affecting SWF versions above `swf-version=37`.
 The AIR window TimerResolution appears to have a direct affect on additional delays found in 'Waiting for Next Frame'.
 
 ## NOTE That this extension has not been widely tested
@@ -72,7 +72,7 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 ![Standard Issue from default Frame Limiter](img/WithoutANE-58FPS.png)
 *Total Frame Time -> 58.0 FPS + 15.621ms*
 
-##### Frame Limiting with TimerResANE::UpdateResolution(0) implemented, NtTimerResolution @ 0.496ms
+##### Default Frame Limiting with TimerResANE::UpdateResolution(0) implemented, NtTimerResolution @ 0.496ms
 ![Issue Resolved](img/WIthANE@0-58FPS.png)
 
 ##### NtTimerResolution @ 8.0ms - Frame Spikes now ~24ms
@@ -80,10 +80,12 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 *Total Frame Time -> 58.0FPS + 8.0ms* 
 
 ##### Old vs. New SWF version NtTimerResolution behavior
-**Old**:
+**Old (`-swf-version` <=37)**:
+
 ![old behavior](img/timerres-oldsdk.png)
 
-**New**:
+**New (`-swf-version` >=38)**:
+
 ![new behavior](img/timerres-newsdk.png)
 
-*Older SWF Versions specified lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times.*
+*Older SWF Versions below 38 lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times.*
