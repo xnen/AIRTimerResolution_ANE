@@ -7,6 +7,12 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 - `TimerResExtension`: FlashDevelop ActionScript source for the extension
 - `TimerResANE`: Packaged Extension
 
+### Requires:
+- Adobe AIR SDK (~32.0.0.116)
+- FlashDevelop
+- Visual Studio 2019
+- Visual C++ 2015 Redistributable
+
 ### Building:
 Step 1: Set up a directory with the contents of TimerResANE. For FlashDevelop, this directory must end in `.ane` (i.e. TimerResExt.ane)
 
