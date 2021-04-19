@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="TimerRes">
+        <def id="TimerRes" /> 
+        <dep id="flash.external:ExtensionContext" type="s" />
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+        <dep id="AS3" type="n" /> 
+      </script>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/2.5"> 
+	<id>TimerResExt</id>
+	<versionNumber>0.0.1</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>TimerResExtDLL.dll</nativeLibrary>
+				<initializer>TimerResExt_Init</initializer>
+				<finalizer>TimerRes_Destroy</finalizer>
+			</applicationDeployment>
+		</platform>
+	</platforms>
+</extension>
