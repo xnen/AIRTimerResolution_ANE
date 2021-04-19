@@ -66,7 +66,7 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 ##### 4. The extension can be destroyed using ``TimerResANE.dispose();``
 
 
-### Issue / Fix
+## Comparisons & Issue Description
 
 ##### Default Frame Limiting on latest AIR SDK, NtTimerResolution @ 15.621ms (default)
 ![Standard Issue from default Frame Limiter](img/WithoutANE-58FPS.png)
@@ -88,4 +88,4 @@ The frame-pacing issue smooths out consistently with the lowest possible resolut
 
 ![new behavior](img/timerres-newsdk.png)
 
-*Older SWF Versions below 38 lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times.*
+*Older SWF Versions below 38 lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times. This extension allows control over this until the issue is fixed.*
