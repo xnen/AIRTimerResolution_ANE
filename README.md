@@ -41,9 +41,14 @@ Step 7: The extension should now be usable. You will need to link the SWC in the
 ```
 
 ### How to use:
-Simply import `io.improt.timerres.TimerResANE`, initialize with ``TimerResANE.Init()``, then specify a target TimerResolution through ``TimerResANE.UpdateResolution(uint)``.
+##### 1. Include the ANE in your AIR project & import with `io.improt.timerres.TimerResANE`
 
-UpdateResolution(uint) accepts a positive value, where **1000** == a NtTimerResolution of 1.0 milliseconds. (500 = 0.5ms, etc).
+##### 2. Initialize the extension through ``TimerResANE.Init()``.
+
+##### 3. Specify any target TimerResolution with ``TimerResANE.UpdateResolution(uint)`` 
+
+
+``UpdateResolution(uint)`` accepts a positive value, where **1000** == a NtTimerResolution of 1.0 milliseconds. (500 = 0.5ms, etc).
 
 The TimerResolution standard for most devices seem to be ~1.0ms, though the extension will clamp between the system's minimum and maximum resolution. ``TimerResANE.UpdateResolution(0)`` will update to the lowest possible resolution.
 
