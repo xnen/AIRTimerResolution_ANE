@@ -26,7 +26,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 **Step 4:** Replace the two `library.swf` files in `\` and `\META-INF\ANE\Windows-x86\` from your TimerResANE directory, with the built SWF from Step 2. 
 - (Built SWF is found in ``bin`` of the FlashDevelop directory. Note that it must be named library.swf)
 
-**Step 5:** Build the native library using at least Visual Studio 2019. Make sure you are building 'Release' for 'x86'. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
+**Step 5:** Build the native library using at least Visual Studio 2019. Double check that 'Release' and 'x86' are selected to build properly. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
 
 **Step 6:** Replace ``TimerResExtDLL.dll`` from `\META-INF\ANE\Windows-x86\` with your newly compiled native DLL from Step 5.
 
