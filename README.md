@@ -61,3 +61,6 @@ The TimerResolution standard for most devices seem to be ~1.0ms, though the exte
 - The resulting TimerResolution somehow increased in interval as a result of updating it.
 
 `Init` should only return false if the `createExtensionContext` fails to return an ExtensionContext
+
+##### 4. The extension can be destroyed using ``TimerResANE.dispose();``
+
