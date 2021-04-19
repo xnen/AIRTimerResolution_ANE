@@ -1,6 +1,8 @@
 # AIRTimerResolution_ANE
-Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution, affecting SWF versions above `swf-version=37`.
+Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution.
 The AIR window TimerResolution appears to have a direct affect on additional delays found in 'Waiting for Next Frame'.
+
+SWF versions above 37 appear to not properly set the NtTimerResolution to 1.0 ms, and this extension aims to give control to that
 
 ## NOTE That this extension has not been widely tested
 
@@ -49,9 +51,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 
 ``UpdateResolution(uint)`` accepts a positive value, where **1000** == a NtTimerResolution of 1.0 milliseconds. (500 = 0.5ms, etc).
 
-The TimerResolution standard low for most devices seem to be ~1.0ms, though the extension will clamp between the system's minimum and maximum resolution. ``TimerResANE.UpdateResolution(0)`` will update to the lowest possible resolution.
-
-The frame-pacing issue smooths out consistently with the lowest possible resolution requested. Older versions of AIR had their Window already set to 1.0ms, which is likely why only the newer builds are becoming affected.
+The TimerResolution standard low for most devices seem to be ~1.0ms, though the extension will clamp between the system's minimum and maximum resolution. ``TimerResANE.UpdateResolution(0)`` will update to the lowest possible resolution of that device.
 
 `Init()` and `UpdateResolution(uint)` both return true or false depending on if the action completed successfully.
 
