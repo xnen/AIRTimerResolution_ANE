@@ -26,7 +26,7 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 **Step 4:** Replace the two `library.swf` files in `\` and `\META-INF\ANE\Windows-x86\` from your TimerResANE directory, with the built SWF from Step 2. 
 - (Built SWF is found in ``bin`` of the FlashDevelop directory. Note that it must be named library.swf)
 
-**Step 5:** Build the native library using at least Visual Studio 2019 for Release. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
+**Step 5:** Build the native library using at least Visual Studio 2019. Make sure you are building 'Release' for 'x86'. You will need to configure the Include Directories to add the `include` directory from your Adobe AIR SDK. You will also need to add an additional dependency to the Linker pointing to `\lib\win\FlashRuntimeExtensions.lib` of your AIR SDK. 
 
 **Step 6:** Replace ``TimerResExtDLL.dll`` from `\META-INF\ANE\Windows-x86\` with your newly compiled native DLL from Step 5.
 
@@ -49,7 +49,9 @@ The AIR window TimerResolution appears to have a direct affect on additional del
 
 ``UpdateResolution(uint)`` accepts a positive value, where **1000** == a NtTimerResolution of 1.0 milliseconds. (500 = 0.5ms, etc).
 
-The TimerResolution standard for most devices seem to be ~1.0ms, though the extension will clamp between the system's minimum and maximum resolution. ``TimerResANE.UpdateResolution(0)`` will update to the lowest possible resolution.
+The TimerResolution standard low for most devices seem to be ~1.0ms, though the extension will clamp between the system's minimum and maximum resolution. ``TimerResANE.UpdateResolution(0)`` will update to the lowest possible resolution.
+
+The frame-pacing issue smooths out consistently with the lowest possible resolution requested. Older versions of AIR had their Window already set to 1.0ms, which is likely why only the newer builds are becoming affected.
 
 `Init()` and `UpdateResolution(uint)` both return true or false depending on if the action completed successfully.
 
