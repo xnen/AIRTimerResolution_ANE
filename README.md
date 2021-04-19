@@ -42,11 +42,8 @@ Step 7: The extension should now be usable. You will need to link the SWC in the
 
 ### How to use:
 ##### 1. Include the ANE in your AIR project & import with `io.improt.timerres.TimerResANE`
-
 ##### 2. Initialize the extension through ``TimerResANE.Init()``.
-
 ##### 3. Specify any target TimerResolution with ``TimerResANE.UpdateResolution(uint)`` 
-
 
 ``UpdateResolution(uint)`` accepts a positive value, where **1000** == a NtTimerResolution of 1.0 milliseconds. (500 = 0.5ms, etc).
 
