@@ -2,9 +2,9 @@
 Quick extension workaround for Adobe AIR's frame pacing issue regarding NtTimerResolution.
 The AIR window TimerResolution appears to have a direct affect on additional delays found in 'Waiting for Next Frame'.
 
-SWF versions above 37 appear to not properly set the NtTimerResolution to 1.0 ms, and this extension aims to give control to that
+SWF versions >=38 appear to not properly request a 1.0 ms NtTimerResolution, and this extension aims to allow ActionScript to handle this.
 
-## NOTE That this extension has not been widely tested
+## **NOTE** That this extension has not been widely tested
 
 ### Components:
 - `TimerResExtDLL`: Native library source to interface with `ntdll.dll`
