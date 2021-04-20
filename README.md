@@ -87,5 +87,3 @@ The TimerResolution standard low for most devices seem to be ~1.0ms, though the 
 **New (`-swf-version` >=38)**:
 
 ![new behavior](img/timerres-newsdk.png)
-
-*Older SWF Versions below 38 lock resolution @ 1.0ms. New behavior seems to not affect timer resolution and add to frame times. This extension allows control over this until the issue is fixed.*
